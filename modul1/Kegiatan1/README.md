@@ -3,9 +3,9 @@ Mau beli kunci enkripsi?, pm aja, [klik disini](https://wa.me/6281232857502/?tex
 
 ## Output 
 ### Int Output
-![Int Output](/snippet/01.PNG)
+![Int Output](snippet/01.PNG)
 ### Double Output
-![Double Output](/snippet/02.PNG)
+![Double Output](snippet/02.PNG)
 
 ## Follow me in github 
 [Click Here](https://github.com/BosToken)
