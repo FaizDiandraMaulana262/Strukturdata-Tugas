@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class MainQueue {
     public void queueExample(){
-        Queue queue = new LinkedList();
+        LinkQueue queue = new LinkQueue();
         queue.add("Java");
         queue.add("DotNet");
         queue.offer("PHP");
