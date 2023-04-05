@@ -1,5 +1,3 @@
-package modul3.latihan;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

@@ -34,8 +34,8 @@ def main():
     passCheckSmilarity(pass01, pass02)
 
 def enc(val1, val2):
-    file = open("Segitiga.java", "r")
-    writeFile = open("Segitiga", "a")
+    file = open("modul2.sh", "r")
+    writeFile = open("test.p", "a")
     for x in file.read():
         writeFile.writelines(str(val1 - int.from_bytes(bytes(x, 'ascii'), "big")) + "\n")
     
