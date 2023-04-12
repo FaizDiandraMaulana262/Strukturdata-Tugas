@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class MainQueue {
     public void queueExample(){
         LinkQueue queue = new LinkQueue();
@@ -12,6 +9,7 @@ public class MainQueue {
         System.out.println("Element : "+queue.element());
         System.out.println("Poll : "+queue.poll());
         System.out.println("Peek : "+queue.peek());
+        queue.displayQueue();
     }
     public static void main(String[] args) {
         new MainQueue().queueExample();

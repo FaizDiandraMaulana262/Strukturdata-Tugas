@@ -1,89 +1,41 @@
-public class Stack {
-    public Node top;
+public class Stack{
+    int top, size;
+    String[] stack;
+
+    public Stack(int size){
+        this.size = size;
+        stack = new String[this.size];
+        top = -1;
+    }
 
     public boolean empty(){
-        if(top == null){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return top == -1;
     }
 
     public String peek(){
-        Node current = top;
-        while(!(current.next == null)){
-            current = current.next;
-            String value = current.value;
-            if(current.next == null){
-                return value;
-            }
-        }
-        return null;
+        return stack[top];
     }
 
-    public Node pop(){
-        return top;
+    public String pop(){
+        String tmp = stack[top];
+        top = top - 1;
+        return tmp;
     }
 
-    public void push(String element){   
-        if(top == null){
-            top = new Node(element);
-            top.next = null;
-        }
-
-        Node current = top;
-        while (!(current.next == null)) {
-            current = current.next;
-        }
-
-        current.next = new Node(element);
+    public void push(String element){
+        top = top + 1;
+        stack[top] = element;
     }
 
     public int search(String element){
-        Node current = top;
-        int i = 0;
-        while(!(current.next == null)){
-            current = current.next;
-            String test = current.value;
-            if(test == element){
-                while(!(current.next == null)){
-                    i = i + 1;
-                    current = current.next;
-                }
-                return i;
+        int i = 1;
+        for (String string : stack) {
+            if(string == element){
+                break;
             }
+            i+=1;
         }
-        i = -1;
+
         return i;
     }
-
-    // public void debug(){
-    //     Node current = top;
-    //     while(!(current.next == null)){
-    //         current = current.next;
-    //         String value = current.value;
-    //         if(current.next == null){
-    //             value = null;
-    //         }
-    //     }
-    // }
-
-    // public int debug2(){
-    //     Node current = top;
-    //     int i = 0;
-    //     while(!(current.next == null)){
-    //         current = current.next;
-    //         String test = current.value;
-    //         if(test == "test"){
-    //             while(!(current.next == null)){
-    //                 i = i + 1;
-    //                 current = current.next;
-    //             }
-    //             return i;
-    //         }
-    //     }
-    //     i = -1;
-    //     return i;
-    // }
 }
