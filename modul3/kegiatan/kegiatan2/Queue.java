@@ -28,6 +28,7 @@ public class Queue {
         }
     }
 
+    //queue
     public boolean offer(String element) {
         Node newLink = new Node(element);
         try {
@@ -43,7 +44,7 @@ public class Queue {
 
         Node current = first;
         String currentData = "";
-        while (!(current == null)) {
+        while ((current != null)) {
             currentData = current.data;
             current = current.next;
         }
@@ -88,6 +89,7 @@ public class Queue {
         return first.data;
     }
 
+    // dequeue
     public String poll() {
         // int x = 0, y = 0;
         // Node current = first;
@@ -115,13 +117,27 @@ public class Queue {
         // return null;
         // }
 
+        if (last == null) {
+            return null;
+        }
+        Node p, tmp = first.next;
+        while(tmp != null){
+            p = tmp;
+        }
+        
+        String currentData = first.data;
+        last = null;
+        last = tmp;
+        return currentData;
+    }
+
+    public String debug() {
+
         if (first == null) {
             return null;
         }
-        Node tmp = first.next;
-        String currentData = first.data;
-        first = null;
-        first = tmp;
+        String currentData = last.data;
+        last = null;
         return currentData;
     }
 
@@ -167,5 +183,16 @@ public class Queue {
             System.out.println(current.data);
             current = current.next;
         }
+    }
+
+    public int size() {
+        int x = 0;
+        Node current = first;
+        while (!(current == null)) {
+            x++;
+            System.out.println(current.data);
+            current = current.next;
+        }
+        return x;
     }
 }

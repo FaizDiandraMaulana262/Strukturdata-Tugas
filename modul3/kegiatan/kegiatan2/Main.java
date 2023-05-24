@@ -7,7 +7,7 @@ public class Main {
 
         while (true) {
             System.out.print(
-                    "=== Menu Antrian Rumah Sakit ===\n0. Rumah Sakit Tutup\n1. Menambah Pasien (Tambah Antrian)\n2. Memanggil Pasien Untuk Diperiksa\n3. Cek Antrian Paling Atas\n4. Cek Semua Antrian\n5. Cek Status Antrian\n\nPilih Menu : ");
+                    "=== Menu Antrian Rumah Sakit ===\n0. Rumah Sakit Tutup\n1. Menambah Pasien (Tambah Antrian)\n2. Memanggil Pasien Untuk Diperiksa\n3. Cek Antrian Paling Atas\n4. Cek Semua Antrian\n5. Cek Status Antrian\n6. Cek Panjang Antrian\n\nPilih Menu : ");
             int pilih = input.nextInt();
             if (pilih == 1) {
                 System.out.print("\nMasukan Nama Pasien : ");
@@ -42,9 +42,12 @@ public class Main {
                     System.out.println("Ada Antrian \n");
                 }
             }
-            // else if (pilih == 6) {
-            //     antrian.poll();
-            // }
+            else if (pilih == 6) {
+                System.out.println("\nPanjang Antrian : "+antrian.size()+"\n");
+            }
+            else if (pilih == 7) {
+                System.out.println("\nDEbug : "+antrian.debug()+"\n");
+            }
             else if (pilih == 0){
                 System.out.println("Rumah Sakit Tutup, Datang lagi besok ;D");
                 break;
