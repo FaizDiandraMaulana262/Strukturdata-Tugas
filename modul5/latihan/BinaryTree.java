@@ -30,13 +30,17 @@ public class BinaryTree {
 
     public void preOrder(Node node){
         if (node != null) {
-            preOrder(node.right);
             System.out.println(node.data + " ");
             preOrder(node.left);
+            preOrder(node.right);
         }
     }
 
     public void postOrder(Node node){
-        
+        if (node != null) {
+            preOrder(node.left);
+            preOrder(node.right);
+            System.out.println(node.data + " ");
+        }
     }
 }
