@@ -1,4 +1,4 @@
-package Test;
+package Versi2;
 
 public class Node {
     String nama;
