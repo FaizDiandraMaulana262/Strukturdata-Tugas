@@ -5,6 +5,10 @@ public class BinaryTree {
         return (int) data;
     }
 
+    public boolean isNull(){
+        return this.root == null;
+    }
+
     public void tambahData(String data){
         root = tambahData(this.root, new Node(data));
     }
@@ -18,9 +22,12 @@ public class BinaryTree {
         int newData = isGreater(tambahData.data.charAt(0));
         int rootData = isGreater(root.data.charAt(0));
 
+        System.out.println("masuk");
         if (newData < rootData) {
+            System.out.println("kiri");
             root.left = tambahData(root.left, tambahData);
         } else {
+            System.out.println("Kanan");
             root.right = tambahData(root.right, tambahData);
         }
         return root;
@@ -48,5 +55,14 @@ public class BinaryTree {
             postOrder(node.left);
             postOrder(node.right);
         }
+    }
+
+    public static void main(String[] args) {
+        BinaryTree test = new BinaryTree();
+        System.out.println(test.isNull());
+        test.tambahData("test");
+        System.out.println(test.root.data);
+        System.out.println(test.isNull());
+        test.tambahData("a");
     }
 }
