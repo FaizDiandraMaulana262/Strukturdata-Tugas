@@ -1,10 +1,6 @@
 public class BinaryTree {
     public Node root;
 
-    // public boolean isNull(){
-    //     return root == null;
-    // }
-
     public int isGreater(char data){
         return (int) data;
     }
